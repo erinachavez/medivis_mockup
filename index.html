@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Medivis</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="media/favicon.png">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="site.css">
+  </head>
+
+  <body class="preload">
+    <!-- Navbar -->
+    <nav class="d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center">
+        <h1 class="logo">
+          <a href="/">Medivis</a>
+        </h1>
+
+        <h5 class="important-link">
+          <a href="/">SurgicalAR</a>
+        </h5>
+        <h5 class="important-link">
+          <a href="anatomyx.html">AnatomyX</a>
+        </h5>
+        <h5 class="important-link">
+          <a href="about.html">About</a>
+        </h5>
+      </div>
+
+      <button class="important-btn" onclick="location.href='contact.html'">
+        <h5>Contact</h5>
+      </button>
+    </nav>
+
+
+    <!-- Splash -->
+    <div class="splash">
+      <img class="bg-img" src="media/rig.png" />
+      <div class="overlay"></div>
+
+      <div class="d-flex h-100 align-items-center justify-content-center">
+        <h1 class="jumbo neg-lg-margin-top underline position-relative">Pushing the limits of what's possible.</h1>
+      </div>
+    </div>
+
+    <div class="section splash-margin">
+      <!-- SurgicalAR -->
+      <div class="container-fluid">
+        <div class="row no-gutters align-items-center">
+          <div class="col-5">
+            <div class="iframe-container">
+              <iframe src="https://player.vimeo.com/video/392539846?background=1"
+                      frameborder="0"
+                      webkitAllowFullScreen
+                      mozallowfullscreen
+                      allowfullscreen
+                      allow="autoplay">
+              </iframe>
+            </div>
+          </div>
+          <div class="col-7 lg-pad-left">
+            <h1 class="sm-margin-bottom">SurgicalAR</h1>
+            <p>
+              Medivis is building the future of computer-assisted surgery. We're harnessing augmented
+              reality (AR) and artificial intelligence (AI) to build software that improves surgical
+              outcomes for patients, and drives massive cost savings for medical institutions.
+            </p>
+
+            <h5 class="important-link margin-top">
+              <a href="contact.html">Request a Demo &rarr;</a>
+            </h5>
+          </div>
+        </div>
+      </div>
+
+      <!-- News -->
+      <hr class="margin-bottom" />
+
+      <h1 class="margin-bottom">Medivis in the News</h1>
+
+      <div class="container-fluid">
+        <div class="row no-gutters">
+          <div class="col-4 pad-left pad-right">
+            <article class="short" onclick="window.open('https://www.va.gov/opa/pressrel/pressrelease.cfm?id=5395')">
+              <div class="title">
+                <i class="far fa-newspaper sm-margin-bottom"></i>
+                <h4 class="sm-margin-bottom">VA partners with Medivis, Microsoft and Verizon to advance health care services for Veterans</h4>
+                <h6>
+                  U.S. Department of Verteran Affairs
+                  <br>
+                  February 18, 2020
+                </h6>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-4 pad-left pad-right">
+            <article class="short" onclick="window.open('https://www.prnewswire.com/news-releases/medivis-wins-fda-clearance-for-breakthrough-augmented-reality-surgical-system-300859064.html?tc=eml_cleartime')">
+              <div class="title">
+                <i class="far fa-newspaper sm-margin-bottom"></i>
+                <h4 class="sm-margin-bottom">Medivis Wins FDA Clearance For Breakthrough Augmented Reality Surgical System</h4>
+                <h6>
+                  PRNewswire
+                  <br>
+                  May 30, 2019
+                </h6>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-4 pad-left pad-right">
+            <article class="short" onclick="window.open('https://hololens.reality.news/news/medical-software-maker-medivis-closes-2-3-million-funding-bring-hololens-surgical-platform-0193743/')">
+              <div class="title">
+                <i class="far fa-newspaper sm-margin-bottom"></i>
+                <h4 class="sm-margin-bottom">NextReality Announcement of SurgicalAR</h4>
+                <h6>
+                  Next Reality
+                  <br>
+                  February 14, 2019
+                </h6>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <!-- Problems -->
+      <hr />
+
+      <div class="container-fluid">
+        <!-- Parallax -->
+        <div class="row no-gutters xl-margin-bottom">
+          <div class="col-8 offset-2">
+            <div class="parallax-title-img">
+              <img src="media/2d_scan.jpg" />
+
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 480" preserveAspectRatio="none">
+                <polygon points="0,480 0,480 1120,480 1120,480" fill-rule="nonzero" fill="#1a1a1a"></polygon>
+              </svg>
+            </div>
+
+            <h1 class="parallax-title">
+              <span class="stat">20%</span>
+              <br>
+              of all invasive operations, are fraught with preventable mistakes.
+            </h1>
+
+            <p class="sm-margin-bottom">These errors often arise from surgeons operating on an incorrect body part, gaps in communication between suregons and staff, and use of unreliable systems and protocols.</p>
+            <h6>(<span class="font-italic">Medical Error Prevention</span>, Hipskind 2020)</h6>
+          </div>
+        </div>
+
+        <!-- Problem #1: Attention -->
+        <div class="row no-gutters xl-margin-bottom align-items-center">
+          <div class="col-7 lg-pad-right">
+            <h2 class="margin-bottom">
+              Traditional operating rooms pull a surgeon's attention away from their patient
+            </h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+              exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+              irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+              pariatur.
+            </p>
+          </div>
+          <div class="col-5">
+            <img src="media/operatingroom.jpg" />
+          </div>
+        </div>
+
+        <!-- Problem #2: 2D -->
+        <div class="row no-gutters align-items-center">
+          <div class="col-5">
+            <img src="media/2D_operating_room.jpg" />
+          </div>
+          <div class="col-7 lg-pad-left">
+            <h2 class="margin-bottom">The surgical world continues to rely on 2D imaging technology to operate on incredibly complex patient pathology.</h2>
+            <p>
+              Surgeons are forced to use their imagination to mentally fuse and display data in
+              order to accurately plan and perform surgery with precision. This is incredibly
+              difficult and inefficient for the practitioner and leaves the door open to potential
+              error. SurgicalAR was developed to enable superior utilization of medical imaging
+              data to maximize accuracy, improve surgical outcomes, and ensure patient safety in
+              the operating room.
+            </p>
+          </div>
+        </div>
+
+        <!-- Solution -->
+        <hr />
+
+        <!-- Quote -->
+        <div class="row no-gutters lg-margin-bottom">
+          <div class="col-8 offset-2">
+            <h2 class="text-center sm-margin-bottom">
+              "It doesn't take too many times, of seeing mistakes happen in the hospital, to say enough is enough."
+            </h2>
+            <h6 class="text-right">
+              &mdash; Christopher Morley, Co-Founder & CEO
+            </h6>
+          </div>
+        </div>
+
+        <!-- Layered GIF -->
+        <div class="row no-gutters xl-margin-bottom">
+          <div class="col-10 offset-1 layered-content">
+            <img src="media/3D_scan.gif" />
+            <div class="text-layer">
+              <h3>Medivis introduces advancements in holographic visualization and navigation to fundamentally advance surgical intervention, and revolutionize how surgeons safely operate on their patients.</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- AR & AI -->
+        <div class="row no-gutters align-items-center">
+          <div class="col-4 offset-1 text-center">
+            <img class="margin-bottom" src="media/osamah_golfinos.jpg" />
+            <h2 class="sm-margin-bottom">Augmented Reality</h2>
+            <p>
+              We directly overlay high-fidelity 3D imaging and other patient data, already
+              collected and readily available in hospital workflows today.
+            </p>
+          </div>
+          <div class="col-4 offset-2 text-center">
+            <img class="margin-bottom" src="media/artificial_intelligence.gif" />
+            <h2 class="sm-margin-bottom">Artificial Intelligence</h2>
+            <p>
+              We use real-time data analysis to provide surgeons key insights that lead to
+              better, faster, and more informed decision-making during surgery.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="section short position-relative">
+      <img class="bg-img" src="media/surgicalar_operating_room.jpg" />
+      <div class="overlay orange"></div>
+
+      <div class="d-flex justify-content-center align-items-center">
+        <div>
+          <h2>Discover how SurgicalAR can revolutionize patient care</h2>
+          <button class="margin-center margin-top" onclick="location.href='contact.html'">
+            <h5>Request a Demo</h5>
+          </button>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="d-flex justify-content-between">
+      <div class="d-flex">
+        <div class="sm-logo lg-margin-right">
+          <h1 class="logo">M</h1>
+        </div>
+
+        <div class="lg-margin-right">
+          <h6>Site Map</h6>
+          <h5 class="important-link">
+            <a href="/">SurgicalAR</a>
+          </h5>
+          <h5 class="important-link">
+            <a href="anatomyx.html">AnatomyX</a>
+          </h5>
+          <h5 class="important-link">
+            <a href="about.html">About</a>
+          </h5>
+          <h5 class="important-link">
+            <a href="contact.html">Contact</a>
+          </h5>
+        </div>
+
+        <div>
+          <h6>Sign In</h6>
+          <h5 class="important-link">
+            <a href="https://www.surgicalar.com/" target="_blank">SurgicalAR</a>
+          </h5>
+          <h5 class="important-link">
+            <a href="https://www.anatomyx.com/" target="_blank">AnatomyX</a>
+          </h5>
+        </div>
+      </div>
+
+      <div class="d-flex align-items-end">
+        <h6 class="text-right margin-none">
+          &copy; 2020 Medivis
+          <br>
+          All rights reserved.
+        </h6>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="site.js"></script>
+  </body>
+</html>

@@ -1,0 +1,556 @@
+/*------------------------------------------------------------------
+Table of Contents
+
+- Root
+- Fonts
+    - Blender
+    - Cerebri Sans Pro
+- Body
+- Typography
+    - Colors
+    - Custom Sizes
+    - Text Decoration
+- Background Colors
+- Margins
+    - Large Negative
+    - Small
+    - Regular
+    - Large
+    - Extra Large
+- Padding
+    - Regular
+    - Large
+- Components
+    - Articles
+    - Blockquotes
+    - Buttons
+        - Important
+    - Forms
+    - Horizontal Rules
+    - Icons
+    - Images
+        - Background Images
+    - Important Links
+    - Inline Frames
+    - Layered Content
+    - Logos
+    - Overlays
+    - Parallax Titles
+    - Sections
+    - Videos
+- Areas
+    - Navbar
+    - Footer
+- Animations
+    - Underline
+    - Underline Fast
+    - Fade In
+
+------------------------------------------------------------------*/
+
+/* Root ----------------------------------------------------------*/
+:root {
+  --bg-color: #1a1a1a;
+  --light-bg-color: #343434;
+
+  --light-grey-accent-color: #9a9a9a;
+  --orange-accent-color: #fe6a57;
+  --white-accent-color: #ffffff;
+
+  --border-radius: 5px;
+  --letter-spacing: 0.5px;
+
+  --navbar-height: calc(50px + (2.5rem*1.2));
+  --splash-height: 550px;
+  --footer-height: calc(50px + (0.8rem*1.2) + (1.25rem*1.2)*4 + 65px);
+
+  --slide-width: 50%;
+}
+
+
+/* Fonts ---------------------------------------------------------*/
+/* Fonts: Blender */
+@font-face {
+  font-family: "Blender";
+  src: url("fonts/Blender TTF/Blender-Medium.ttf");
+}
+
+.blender {
+  font-family: "Blender" !important;
+  letter-spacing: var(--letter-spacing);
+}
+
+/* Fonts: Cerebri Sans Pro */
+@font-face {
+  font-family: "Cerebri Sans Pro";
+  src: url("fonts/Cerebri Sans Pro/TTF/CerebriSansPro-Regular.ttf");
+  src: url("fonts/Cerebri Sans Pro/OTF/CerebriSansPro-Regular.otf");
+}
+
+.cerebri-sans-pro { font-family: "Cerebri Sans Pro" !important; }
+
+
+/* Body ----------------------------------------------------------*/
+body {
+  background-color: var(--bg-color);
+  min-height: 100vh;
+  padding-bottom: var(--footer-height);
+  padding-top: var(--navbar-height);
+  position: relative;
+}
+
+
+/* Bootstrap Customization ---------------------------------------*/
+.container-fluid { padding: 0; }
+
+.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}
+
+/* Typography ----------------------------------------------------*/
+h1, h2, h3, h4, h5, h6, p, a, i, label { margin: 0; }
+h1, h2, h3, h4, h5, p, a, a:hover, i, label { color: var(--white-accent-color); }
+
+h1, h2, h3, h4, h5, label {
+  font-family: "Blender" !important;
+  letter-spacing: var(--letter-spacing) !important;
+}
+
+p, h6 { font-family: "Cerebri Sans Pro"; }
+
+h6 {
+  color: var(--light-grey-accent-color);
+  font-size: 0.8rem;
+  letter-spacing: var(--letter-spacing);
+}
+
+a { transition: ease 0.2s; }
+  a:hover { text-decoration: none; }
+
+/* Typography: Colors */
+.light-grey { color: var(--light-grey-accent-color); }
+.orange { color: var(--orange-accent-color); }
+.white { color: var(--white-accent-color); }
+
+/* Typography: Custom Sizes */
+.jumbo { font-size: 4rem; }
+
+/* Typography: Text Decoration */
+.underline:after {
+  animation: underline ease 2.5s;
+  background-color: var(--orange-accent-color);
+  content: "";
+  height: 5px;
+  left: 0;
+  margin-top: 3px;
+  position: absolute;
+  top: 100%;
+  transform-origin: left center;
+  width: 100%;
+}
+
+.underline:not(.fast):after { animation: underline ease 2.5s; }
+.underline.fast:after { animation: underlineFast ease 1s; }
+
+
+/* Background Colors ---------------------------------------------*/
+.light-bg { background-color: var(--light-bg-color); }
+.orange-bg { background-color: var(--orange-accent-color); }
+.white-bg { background-color: var(--white-accent-color); }
+
+
+/* Margins -------------------------------------------------------*/
+.margin-none { margin: 0 !important; }
+
+.margin-center {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Margins: Large Negative */
+.neg-lg-margin-left { margin-left: -50px !important; }
+.neg-lg-margin-right { margin-right: -50px !important; }
+.neg-lg-margin-top { margin-top: -50px !important; }
+.neg-lg-margin-bottom { margin-bottom: -50px !important; }
+
+/* Margins: Small */
+.sm-margin-left { margin-left: 10px !important; }
+.sm-margin-right { margin-right: 10px !important; }
+.sm-margin-top { margin-top: 10px !important; }
+.sm-margin-bottom { margin-bottom: 10px !important; }
+
+/* Margins: Regular */
+.margin-left { margin-left: 25px !important; }
+.margin-right { margin-right: 25px !important; }
+.margin-top { margin-top: 25px !important; }
+.margin-bottom { margin-bottom: 25px !important; }
+
+/* Margins: Large */
+.lg-margin-left { margin-left: 50px !important; }
+.lg-margin-right { margin-right: 50px !important; }
+.lg-margin-top { margin-top: 50px !important; }
+.lg-margin-bottom { margin-bottom: 50px !important; }
+
+/* Margins: Extra Large */
+.xl-margin-left { margin-left: 100px !important; }
+.xl-margin-right { margin-right: 100px !important; }
+.xl-margin-top { margin-top: 100px !important; }
+.xl-margin-bottom { margin-bottom: 100px !important; }
+
+
+/* Padding -------------------------------------------------------*/
+.pad-none { padding: 0 !important; }
+.pad-bottom-none { padding-bottom: 0 !important; }
+
+/* Padding: Small */
+.sm-pad-left { padding-left: 10px !important; }
+.sm-pad-right { padding-right: 10px !important; }
+.sm-pad-top { padding-top: 10px !important; }
+.sm-pad-bottom { padding-bottom: 10px !important; }
+
+/* Padding: Regular */
+.pad-around { padding: 25px !important; }
+.pad-left { padding-left: 25px !important; }
+.pad-right { padding-right: 25px !important; }
+.pad-top { padding-top: 25px !important; }
+.pad-bottom { padding-bottom: 25px !important; }
+
+/* Padding: Large */
+.lg-pad-left { padding-left: 50px !important; }
+.lg-pad-right { padding-right: 50px !important; }
+.lg-pad-top { padding-top: 50px !important; }
+.lg-pad-bottom { padding-bottom: 50px !important; }
+
+/* Margins: Extra Large */
+.xl-pad-left { padding-left: 100px !important; }
+.xl-pad-right { padding-right: 100px !important; }
+.xl-pad-top { padding-top: 100px !important; }
+.xl-pad-bottom { padding-bottom: 100px !important; }
+
+
+/* Components ----------------------------------------------------*/
+/* Components: Articles */
+article {
+  background-color: var(--light-bg-color);
+  border-left: 5px solid var(--orange-accent-color);
+  cursor: pointer;
+  min-height: 425px;
+  position: relative;
+  transition: ease 0.2s;
+}
+  article:hover { background-color: var(--orange-accent-color); }
+
+  article .featured-image {
+    background-position: center center;
+    background-size: cover;
+    background-repeat: none;
+    height: 150px;
+    width: 100%;
+  }
+
+  article .title { padding: 20px 25px; }
+    article .title h6 {
+      bottom: 15px;
+      left: 25px;
+      position: absolute;
+      transition: ease 0.2s;
+    }
+      article:hover .title h6 { color: var(--white-accent-color); }
+
+/* Components: Articles: Short */
+article.short { min-height: 250px; }
+  article.short .title { padding: 15px 25px; }
+
+/* Components: Blockquotes */
+.blockquote {
+  border-radius: var(--border-radius);
+  margin: 0 !important;
+  padding: 25px 30px;
+}
+
+/* Components: Buttons */
+button {
+  background-color: var(--white-accent-color);
+  border: none;
+  border-radius: 3px;
+  display: block;
+  height: fit-content;
+  line-height: 1;
+  padding: 7.5px 15px;
+  transition: ease 0.2s;
+}
+  button:hover {
+    background-color: var(--light-bg-color);
+    border-color: var(--light-bg-color);
+  }
+
+  button h5 {
+    color: var(--bg-color);
+    margin: 0 !important;
+    transition: ease 0.2s;
+  }
+    button:hover h5 { color: var(--white-accent-color); }
+
+/* Components: Buttons: Important */
+button.important-btn {
+  background-color: var(--orange-accent-color);
+  border-color: var(--orange-accent-color);
+}
+  button.important-btn:hover {
+    background-color: var(--light-bg-color);
+    border-color: var(--light-bg-color);
+  }
+
+  button.important-btn h5 { color: var(--white-accent-color); }
+
+/* Components: Carousel */
+.show-neighbors { overflow: hidden; }
+
+  .carousel-inner {
+    width: 200%;
+    left: -50%;
+  }
+
+  .carousel-item-next:not(.carousel-item-left),
+  .carousel-item-right.active {
+    -webkit-transform: translate3d(33%, 0, 0);
+    transform: translate3d(33%, 0, 0);
+  }
+
+  .carousel-item-prev:not(.carousel-item-right),
+  .carousel-item-left.active {
+    -webkit-transform: translate3d(-33%, 0, 0);
+    transform: translate3d(-33%, 0, 0);
+  }
+
+  .carousel-item .slide {
+    float: left;
+    position: relative;
+    width: 33.33333333%;
+  }
+}
+
+/* Components: Forms */
+form { width: 100%; }
+
+  form input:not([type=checkbox]),
+  form textarea {
+    background-color: var(--light-bg-color);
+    border: none;
+    font-family: "Cerebri Sans Pro";
+    padding: 10px 15px;
+    width: 100%;
+  }
+
+/* Components: Horizontal Rules */
+hr {
+  border-top: 1px solid var(--orange-accent-color);
+  margin: 50px 0;
+}
+
+/* Components: Icons */
+i { font-size: 3rem; }
+
+/* Components: Images */
+img { width: 100%; }
+
+/* Components: Images: Background Images */
+img.bg-img {
+  animation: fadeIn ease 1.5s;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+/* Components: Important Links */
+.important-link {
+  font-family: "Blender";
+  letter-spacing: var(--letter-spacing);
+  padding: 0;
+}
+  .important-link a { position: relative; }
+
+    .important-link a:after {
+      background-color: var(--orange-accent-color);
+      content: "";
+      height: 2px;
+      left: 0;
+      margin-top: 3px;
+      position: absolute;
+      top: 100%;
+      transform: scalex(0);
+      transform-origin: left center;
+      transition: transform 0.4s;
+      width: 50%;
+    }
+      .important-link a:hover:after { transform: scalex(1); }
+
+/* Components: Inline Frames */
+.iframe-container {
+  height: auto;
+  max-width: 100%;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+}
+  .iframe-container iframe,
+  .iframe-container object,
+  .iframe-container embed {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+/* Components: Layered Content */
+.layered-content {
+  padding-bottom: 50px;
+  position: relative;
+}
+  .layered-content img { width: 75%; }
+
+  .layered-content .text-layer {
+    background-color: var(--light-bg-color);
+    border-radius: var(--border-radius);
+    bottom: 0;
+    padding: 15px 20px;
+    position: absolute;
+    left: 55%;
+  }
+
+/* Component: Logos */
+.logo {
+  font-family: "Blender";
+  letter-spacing: var(--letter-spacing);
+  text-transform: uppercase;
+}
+
+.sm-logo {
+  align-items: center;
+  background-color: var(--bg-color);
+  display: flex;
+  height: 75px;
+  width: 75px;
+}
+  .sm-logo .logo {
+    line-height: 1;
+    text-align: center;
+    width: 100%;
+  }
+
+/* Components: Overlays */
+.overlay {
+  background-color: var(--bg-color);
+  height: 100%;
+  left: 0;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.overlay.orange { background-color: var(--orange-accent-color); }
+
+/* Components: Parallax Titles */
+.parallax-title-img {
+  position: relative;
+  z-index: -1;
+}
+  .parallax-title-img svg {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+  }
+
+.parallax-title { width: 70%; }
+  .parallax-title .stat { font-size: 7rem; }
+
+/* Compontents: Sections */
+.section { padding: 75px 75px; }
+
+.section.short {
+  max-height: 350px;
+  min-height: 350px;
+  overflow: hidden;
+  padding: 0;
+}
+  .section.short .align-items-center { height: -webkit-fill-available; }
+
+/* Components: Splash */
+.splash {
+  height: calc(var(--splash-height) + var(--navbar-height));
+  left: 0;
+  min-height: calc(var(--splash-height) + var(--navbar-height));
+  overflow: hidden;
+  padding-top: var(--navbar-height);
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+  .splash .underline { animation: fadeIn ease 1.5s; }
+
+  .splash .title-container {
+    background-color: rgba(254, 106, 87, 0.9); /* orange */
+    border-radius: 5px;
+    padding: 15px 30px;
+  }
+
+.splash-margin { padding-top: calc(var(--splash-height) + 75px); }
+
+/* Components: Videos */
+video { width: 100%; }
+
+
+/* Areas ---------------------------------------------------------*/
+/* Areas: Navbar */
+nav {
+  left: 0;
+  padding: 25px 75px;
+  position: fixed;
+  top: 0;
+  transition: ease 0.2s;
+  width: 100%;
+  z-index: 2;
+}
+  nav .logo { margin-right: 75px; }
+  nav h5 { margin-right: 50px; }
+
+/* Areas: Footer */
+footer {
+  background-color: var(--light-bg-color);
+  bottom: 0;
+  left: 0;
+  padding: 25px 75px;
+  position: absolute;
+  width: 100%;
+}
+  footer h5 { margin-bottom: 15px; }
+  footer h6 { margin-bottom: 5px; }
+
+
+/* Animations ----------------------------------------------------*/
+/* Animations: Underline */
+@keyframes underline {
+  0% { transform: scalex(0); }
+  60% { transform: scalex(0); }
+  100% { transform: scalex(1); }
+}
+
+/* Animations: Underline Fast */
+@keyframes underlineFast {
+  0% { transform: scalex(0); }
+  100% { transform: scalex(1); }
+}
+
+/* Animations: Fade In */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
